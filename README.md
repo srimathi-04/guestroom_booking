@@ -1,70 +1,107 @@
-# Getting Started with Create React App
+# GUESTROOM_BOOKING
+This is a MERN stack application that allows house owners to manage their properties and rooms, and customers to book rooms for a short stay. House owners can register their properties, create and manage rooms, while customers can browse, check availability, and book rooms.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Features
 
-## Available Scripts
+- *User Management:*
+  - House owners can register and manage their properties and rooms.
+  - Customers can register, browse rooms, and book rooms.
 
-In the project directory, you can run:
+- *Room Management:*
+  - House owners can create, update, and delete rooms.
+  - Customers can view room details and check availability.
 
-### `npm start`
+- *Booking Management:*
+  - Customers can book available rooms for a specified period.
+  - Bookings prevent double-booking of the same room for overlapping periods.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- *Frontend:* React (not included in this repository)
+- *Backend:* Node.js, Express.js
+- *Database:* MongoDB
+- *Authentication:* JWT (JSON Web Tokens)
+##
+#### Getting Started
+##
+##### Prerequisites
+##
+-  [Node.js](https://nodejs.org/) (v14 or higher)
+- [MongoDB](https://www.mongodb.com/) (You need an Atlas cluster or a local MongoDB instance)
+- Postman (for testing the API)
+##
+1. **Clone the Repository**
+##
+##   ```bash
+##   git clone https://github.com/srimathi-04/GUESTROOM_BOOKING
+##   cd GRP
+##   cd backend
+### Install Dependencies
+npm install
+##
+## Configure Environment Variables
+##
+## Create a .env file in the root directory of the project and add the following variables:
+##
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret_key
+PORT=4000
+##
+## Start the Application
+##
+npm start
+##
+##  The server will start and listen on the port specified in the .env file (default is 4000).
+##  API Endpoints
+##  Authentication
+##  Register House Owner
+##  
+##  POST /api/auth/register-owner
+##  Request Body: { email, mobileNumber, password, role }
+##  Login House Owner
+##  
+##  POST /api/auth/login-owner
+##  Request Body: { email, password }
+##  Register Customer
+##  
+##  POST /api/auth/register-customer
+##  Request Body: { email, mobileNumber, password, role }
+##  Login Customer
+##
+## POST /api/auth/login-customer
+## Request Body: { email, password }
+## Property
+## Create Property
+## POST /api/properties
+## Request Body: { address, description }
+## Room
+## Create Room
+## 
+## POST /api/rooms
+## Request Body: { propertyId, name, floorSize, numberOfBeds, amenities, rentAmount, minBookingPeriod, maxBookingPeriod, photos }
+## Update Room
+##
+## PUT /api/rooms/:roomId
+## Request Body: { name, floorSize, numberOfBeds, amenities, rentAmount, minBookingPeriod, maxBookingPeriod, photos }
+## Delete Room
+##
+## DELETE /api/rooms/:roomId
+## Booking
+## Create Booking
+## POST /api/bookings
+## Request Body: { roomId, startDate, endDate }
+## Middleware
+## Authentication Middleware
 
-### `npm test`
+## Protects routes and ensures that the user is authenticated. It verifies JWT tokens and attaches user information to the request object.
+## Admin Middleware
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Ensures that only users with the 'house_owner' role have access to certain routes.
+##
+##
+##### Instructions to Use the README
+##
+## 1. **Replace Placeholder Information:** Make sure to replace placeholders like `yourusername`, `your_mongodb_connection_string`, `your_jwt_secret_key`, and `your-email@example.com` with your actual information.
+## 2. **Add License:** If you have a specific license, replace the license section accordingly or include a LICENSE file in your repository.
+## 3. **Additional Information:** You might want to add more details about the project or any specific instructions relevant to your project.
+##

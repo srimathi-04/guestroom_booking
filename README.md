@@ -3,24 +3,24 @@ This is a MERN stack application that allows house owners to manage their proper
 
 ## Features
 
-- *User Management:*
+-   User Management:  
   - House owners can register and manage their properties and rooms.
   - Customers can register, browse rooms, and book rooms.
 
-- *Room Management:*
+-   Room Management:  
   - House owners can create, update, and delete rooms.
   - Customers can view room details and check availability.
 
-- *Booking Management:*
+-   Booking Management:  
   - Customers can book available rooms for a specified period.
   - Bookings prevent double-booking of the same room for overlapping periods.
 
 ## Technologies Used
 
-- *Frontend:* React (not included in this repository)
-- *Backend:* Node.js, Express.js
-- *Database:* MongoDB
-- *Authentication:* JWT (JSON Web Tokens)
+-   Frontend:   React (not included in this repository)
+-   Backend:   Node.js, Express.js
+-   Database:   MongoDB
+-   Authentication:   JWT (JSON Web Tokens)
 ##
 #### Getting Started
 ##
@@ -30,7 +30,7 @@ This is a MERN stack application that allows house owners to manage their proper
 - [MongoDB](https://www.mongodb.com/) (You need an Atlas cluster or a local MongoDB instance)
 - Postman (for testing the API)
 ##
-1. **Clone the Repository**
+1.  Clone the Repository 
 ##
 ##   ```bash
 ##   git clone https://github.com/srimathi-04/GUESTROOM_BOOKING
@@ -101,7 +101,7 @@ npm start
 ##
 ##### Instructions to Use the README
 ##
-## 1. **Replace Placeholder Information:** Make sure to replace placeholders like `yourusername`, `your_mongodb_connection_string`, `your_jwt_secret_key`, and `your-email@example.com` with your actual information.
-## 2. **Add License:** If you have a specific license, replace the license section accordingly or include a LICENSE file in your repository.
-##3. **Additional Information:** You might want to add more details about the project or any specific instructions relevant to your project.
+## 1.  Replace Placeholder Information:  Make sure to replace placeholders like `yourusername`, `your_mongodb_connection_string`, `your_jwt_secret_key`, and `your-email@example.com` with your actual information.
+## 2.  Add License:  If you have a specific license, replace the license section accordingly or include a LICENSE file in your repository.
+## 3.  Additional Information:  You might want to add more details about the project or any specific instructions relevant to your project.
 ##
